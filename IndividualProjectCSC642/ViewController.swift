@@ -16,6 +16,7 @@ import FirebaseDatabase
 class ViewController: UIViewController {
 
    
+    @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var emailText: UITextField!
     
@@ -36,6 +37,24 @@ class ViewController: UIViewController {
         //}
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        titleLabel.alpha = 0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        animateTitleInWithSpring()
+    }
+    
+    func animateTitleInWithSpring() {
+        UIView.animate(withDuration: 2.0, delay: 0.25, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: [], animations: {
+            self.titleLabel.alpha = 1
+            self.titleLabel.frame.origin.y += 15
+        }, completion: nil)
+    }
+    
     @IBAction func loginCreate(_ sender: Any) {
         if let email = emailText.text {
             if let password = passwordText.text{

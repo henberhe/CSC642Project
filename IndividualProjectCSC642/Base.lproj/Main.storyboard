@@ -70,6 +70,7 @@
                         <outlet property="loginButton" destination="Bsa-4s-Zfl" id="LTv-Bl-8mU"/>
                         <outlet property="passwordText" destination="w6V-aD-5di" id="w73-uV-Wu2"/>
                         <outlet property="signupButton" destination="vbr-5T-hXy" id="7iG-lA-hxO"/>
+                        <outlet property="titleLabel" destination="IbZ-33-BiF" id="cdK-GV-k4K"/>
                         <segue destination="F1h-jf-tQe" kind="presentation" identifier="moveTohomepage" id="2NE-5O-0J0"/>
                     </connections>
                 </viewController>
