@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0DA57CAB65FC504B2F50277B /* Pods_IndividualProjectCSC642.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67495AE103AFF7DBD596F1CF /* Pods_IndividualProjectCSC642.framework */; };
 		1470C423244155B10076F967 /* SelectPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470C422244155B10076F967 /* SelectPictureViewController.swift */; };
+		14947EB824554AC600091159 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14947EB724554AC600091159 /* ProfileViewController.swift */; };
+		14947EBA24562F9600091159 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14947EB924562F9600091159 /* ContactsViewController.swift */; };
 		14CF22202419BF8100668371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CF221F2419BF8100668371 /* AppDelegate.swift */; };
 		14CF22222419BF8100668371 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CF22212419BF8100668371 /* ViewController.swift */; };
 		14CF22252419BF8100668371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CF22232419BF8100668371 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		1470C422244155B10076F967 /* SelectPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPictureViewController.swift; sourceTree = "<group>"; };
+		14947EB724554AC600091159 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		14947EB924562F9600091159 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		14CF221C2419BF8100668371 /* IndividualProjectCSC642.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndividualProjectCSC642.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CF221F2419BF8100668371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14CF22212419BF8100668371 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				14CF221F2419BF8100668371 /* AppDelegate.swift */,
 				14CF22212419BF8100668371 /* ViewController.swift */,
 				14CF22232419BF8100668371 /* Main.storyboard */,
+				14947EB924562F9600091159 /* ContactsViewController.swift */,
+				14947EB724554AC600091159 /* ProfileViewController.swift */,
 				1470C422244155B10076F967 /* SelectPictureViewController.swift */,
 				14DAF81724286D8E00B9D63E /* HomepageTableViewController.swift */,
 				14CF22262419BF8400668371 /* Assets.xcassets */,
@@ -215,8 +221,10 @@
 			files = (
 				14CF22222419BF8100668371 /* ViewController.swift in Sources */,
 				1470C423244155B10076F967 /* SelectPictureViewController.swift in Sources */,
+				14947EB824554AC600091159 /* ProfileViewController.swift in Sources */,
 				14DAF81824286D8E00B9D63E /* HomepageTableViewController.swift in Sources */,
 				14CF22202419BF8100668371 /* AppDelegate.swift in Sources */,
+				14947EBA24562F9600091159 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
