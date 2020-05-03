@@ -16,6 +16,7 @@
 		14CF22252419BF8100668371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CF22232419BF8100668371 /* Main.storyboard */; };
 		14CF22272419BF8400668371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CF22262419BF8400668371 /* Assets.xcassets */; };
 		14CF222A2419BF8400668371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CF22282419BF8400668371 /* LaunchScreen.storyboard */; };
+		14D78172245E813D006A3386 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D78171245E813D006A3386 /* DetailViewController.swift */; };
 		14DAF81624285FD300B9D63E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14DAF81524285FD300B9D63E /* GoogleService-Info.plist */; };
 		14DAF81824286D8E00B9D63E /* HomepageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DAF81724286D8E00B9D63E /* HomepageTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		14CF22262419BF8400668371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14CF22292419BF8400668371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14CF222B2419BF8400668371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D78171245E813D006A3386 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		14DAF81524285FD300B9D63E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14DAF81724286D8E00B9D63E /* HomepageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageTableViewController.swift; sourceTree = "<group>"; };
 		332C956498A37CF431986BA0 /* Pods-IndividualProjectCSC642.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndividualProjectCSC642.release.xcconfig"; path = "Target Support Files/Pods-IndividualProjectCSC642/Pods-IndividualProjectCSC642.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				14CF221F2419BF8100668371 /* AppDelegate.swift */,
 				14CF22212419BF8100668371 /* ViewController.swift */,
 				14CF22232419BF8100668371 /* Main.storyboard */,
+				14D78171245E813D006A3386 /* DetailViewController.swift */,
 				14947EB924562F9600091159 /* ContactsViewController.swift */,
 				14947EB724554AC600091159 /* ProfileViewController.swift */,
 				1470C422244155B10076F967 /* SelectPictureViewController.swift */,
@@ -225,6 +228,7 @@
 				14DAF81824286D8E00B9D63E /* HomepageTableViewController.swift in Sources */,
 				14CF22202419BF8100668371 /* AppDelegate.swift in Sources */,
 				14947EBA24562F9600091159 /* ContactsViewController.swift in Sources */,
+				14D78172245E813D006A3386 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

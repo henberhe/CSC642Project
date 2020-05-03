@@ -25,8 +25,31 @@ class HomepageTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         table.dataSource = self
+        table.delegate = self
+        self.title = "Diary"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addDiary))
+        //self.navigationItem.backBarButtonItem = addButton
+        self.navigationItem.rightBarButtonItem = addButton
+        let barButton_array:[UIBarButtonItem] = [addButton, editButtonItem]
+        navigationItem.setRightBarButtonItems(barButton_array, animated: false)
+        //navigationItem.setLeftBarButtonItems(barButton_array, animated: false)
+         addButton.tintColor = UIColor.purple
+         editButtonItem.tintColor = UIColor.purple
+        load()
     }
 
+    @objc func addDiary() {
+        if table.isEditing{
+            return
+        }
+        let name:String = "Diary \(data.count + 1)"
+        data.insert(name, at: 0)
+        let indexPath:IndexPath = IndexPath(row: 0, section: 0)
+        table.insertRows(at: [indexPath], with: .automatic)
+        save()
+        //self.performSegue(withIdentifier: "detail", sender: nil)
+    }
     // MARK: - Table view data source
 
     
@@ -56,7 +79,34 @@ class HomepageTableViewController: UITableViewController {
         return cell
     }
     
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        table.setEditing(editing, animated: animated)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        data.remove(at: indexPath.row)
+        table.deleteRows(at: [indexPath], with: .fade)
+        save()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print("\(data[indexPath.row])")
+        self.performSegue(withIdentifier: "detail", sender: nil)
+    }
 
+    func save(){
+        UserDefaults.standard.set(data, forKey: "Diary")
+    }
+    
+    func load(){
+        if let loadedData:[String] = UserDefaults.standard.value(forKey: "Diary")as? [String]{
+            data = loadedData
+            table.reloadData()
+        }
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

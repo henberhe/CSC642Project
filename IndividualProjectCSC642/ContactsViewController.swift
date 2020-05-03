@@ -19,6 +19,23 @@ class ContactsViewController: UIViewController, UITableViewDataSource {
 
         // Do any additional setup after loading the view.
         Ctable.dataSource = self
+        self.title = "Contacts"
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addName))
+        self.navigationItem.rightBarButtonItem = addButton
+        //self.navigationItem.leftBarButtonItem = editButtonItem
+        let barButton_array:[UIBarButtonItem] = [addButton, editButtonItem]
+        navigationItem.setRightBarButtonItems(barButton_array, animated: false)
+        
+    }
+    
+    @objc func addName() {
+        if Ctable.isEditing{
+            return
+        }
+        let name:String = "Enter Name: \(data.count + 1)"
+        data.insert(name, at: 0)
+        let indexPath: IndexPath = IndexPath(row: 0, section: 0)
+        Ctable.insertRows(at: [indexPath], with: .automatic)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +50,16 @@ class ContactsViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        Ctable.setEditing(editing, animated: animated)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        data.remove(at: indexPath.row)
+        Ctable.deleteRows(at: [indexPath], with: .fade)
+    }
+    
     /*
     // MARK: - Navigation
 

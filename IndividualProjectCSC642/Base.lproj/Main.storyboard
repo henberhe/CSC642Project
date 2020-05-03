@@ -78,7 +78,42 @@
             </objects>
             <point key="canvasLocation" x="-2537" y="-1012"/>
         </scene>
-        <!--Home-->
+        <!--Diary-->
+        <scene sceneID="hNc-Dt-z1c">
+            <objects>
+                <viewController title="Diary" id="aTg-DN-7CD" customClass="DetailViewController" customModule="IndividualProjectCSC642" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eaz-XC-2d5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uh7-AD-3Up">
+                                <rect key="frame" x="16" y="127" width="343" height="520"/>
+                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uh7-AD-3Up" firstAttribute="top" secondItem="WRt-fS-0Px" secondAttribute="top" id="2qT-fT-a26"/>
+                            <constraint firstAttribute="bottom" secondItem="Uh7-AD-3Up" secondAttribute="bottom" constant="20" symbolic="YES" id="VFF-5S-0Xl"/>
+                            <constraint firstItem="Uh7-AD-3Up" firstAttribute="trailing" secondItem="Eaz-XC-2d5" secondAttribute="trailingMargin" id="qPl-2A-SFe"/>
+                            <constraint firstItem="Uh7-AD-3Up" firstAttribute="leading" secondItem="Eaz-XC-2d5" secondAttribute="leadingMargin" id="qfI-qe-hbM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WRt-fS-0Px"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Uh7-AD-3Up" id="5Fv-fx-hw6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBl-K1-hXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-900" y="-1719.4902548725638"/>
+        </scene>
+        <!--Homepage Table View Controller-->
         <scene sceneID="0Sx-fX-TWh">
             <objects>
                 <tableViewController id="qKz-sb-hwL" customClass="HomepageTableViewController" customModule="IndividualProjectCSC642" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,27 +138,43 @@
                             <outlet property="delegate" destination="qKz-sb-hwL" id="qsW-oh-MeJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="Tqh-AD-gvt">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="0Md-ac-mgl">
-                            <connections>
-                                <action selector="logOutTapped:" destination="qKz-sb-hwL" id="scX-cf-8xp"/>
-                            </connections>
-                        </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="compose" id="X1m-Ct-NnP">
+                    <navigationItem key="navigationItem" id="Tqh-AD-gvt">
+                        <nil key="title"/>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Logout" id="0Md-ac-mgl">
+                                <color key="tintColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="MMg-nW-B0a" kind="show" id="Q8j-LC-swZ"/>
+                                    <action selector="logOutTapped:" destination="qKz-sb-hwL" id="scX-cf-8xp"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Profile" style="plain" id="QV0-CL-zRQ">
+                                <color key="tintColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="RI7-lz-BsK" kind="show" id="vSS-bt-EuG"/>
                                 </connections>
                             </barButtonItem>
-                        </rightBarButtonItems>
+                            <barButtonItem title="Share" id="X1m-Ct-NnP">
+                                <color key="tintColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="MMg-nW-B0a" kind="show" id="Q8j-LC-swZ"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AkV-h0-i5Z">
+                            <rect key="frame" x="194" y="5.5" width="70" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Contacts">
+                                <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <segue destination="daW-4T-K7s" kind="show" id="FaM-iS-Bwv"/>
+                            </connections>
+                        </button>
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="xES-ic-sJZ" id="YUd-m4-ADf"/>
+                        <segue destination="aTg-DN-7CD" kind="show" identifier="detail" id="UOG-1n-Wcn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40o-mT-1tz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -138,37 +189,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6qL-cd-rxa">
-                                <rect key="frame" x="16" y="79" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Profile" id="a9d-kf-MT4"/>
-                                </items>
-                            </navigationBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jm4-Ue-ubE">
                                 <rect key="frame" x="16" y="581" width="343" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Edit" id="H3Z-Tg-hHc">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Xoc-O0-s5F">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ia7-i3-Slg">
-                                                <rect key="frame" x="16" y="7" width="76" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Add"/>
-                                            </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="fhJ-cp-ZlB">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ava-GS-s99">
-                                                <rect key="frame" x="251" y="7" width="76" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Save"/>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Save" id="H3Z-Tg-hHc"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4m1-So-D1e">
-                                <rect key="frame" x="16" y="135" width="343" height="419"/>
+                                <rect key="frame" x="16" y="138" width="343" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -182,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsF-Xm-i8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911" y="-298"/>
+            <point key="canvasLocation" x="-911.20000000000005" y="-298.2008995502249"/>
         </scene>
         <!--Select Picture View Controller-->
         <scene sceneID="lS2-Lc-7mx">
@@ -193,10 +222,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZn-mh-wdz">
-                                <rect key="frame" x="16" y="94" width="343" height="44"/>
+                                <rect key="frame" x="16" y="146" width="343" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Share" id="lyq-rD-aFG">
+                                    <navigationItem title="Add Picture" id="lyq-rD-aFG">
                                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="xWM-QF-c9j">
                                             <connections>
                                                 <action selector="selectPhotoTapped:" destination="MMg-nW-B0a" id="ggH-hL-n7v"/>
@@ -211,18 +240,18 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gallery-2" translatesAutoresizingMaskIntoConstraints="NO" id="Xlu-Ie-wig">
-                                <rect key="frame" x="18" y="140" width="338" height="202"/>
+                                <rect key="frame" x="18" y="206" width="338" height="202"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzk-aA-2G1">
-                                <rect key="frame" x="16" y="346" width="343" height="30"/>
+                                <rect key="frame" x="16" y="423" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tp-tk-SQZ">
-                                <rect key="frame" x="154" y="375" width="61" height="42"/>
+                                <rect key="frame" x="154" y="465" width="61" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Next">
@@ -254,43 +283,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czw-qU-2iK">
-                                <rect key="frame" x="27" y="137" width="40" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwO-6l-9rl">
-                                <rect key="frame" x="291" y="137" width="58" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Select">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="krq-16-0RB">
-                                <rect key="frame" x="26" y="235" width="322" height="388"/>
+                                <rect key="frame" x="26" y="184" width="322" height="402"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASL-ly-mUe">
-                                <rect key="frame" x="25" y="79" width="323" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Contacts" id="2zR-As-dC0"/>
-                                </items>
-                            </navigationBar>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zwa-Wy-DMd">
-                                <rect key="frame" x="25" y="179" width="323" height="56"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Zwa-Wy-DMd">
+                                <rect key="frame" x="25" y="127" width="323" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="daW-4T-K7s" id="MYW-8q-fBE"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cn0-66-GfW">
+                                <rect key="frame" x="147" y="584" width="62" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="drP-Rg-X6k"/>
@@ -337,4 +352,7 @@
     <resources>
         <image name="gallery-2" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="FaM-iS-Bwv"/>
+    </inferredMetricsTieBreakers>
 </document>

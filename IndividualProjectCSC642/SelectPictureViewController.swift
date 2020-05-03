@@ -23,7 +23,7 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
 
         imagePicker = UIImagePickerController()
         imagePicker?.delegate = self
-        
+        self.title = "Share"
         // Do any additional setup after loading the view.
     }
     
